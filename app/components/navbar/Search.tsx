@@ -61,7 +61,7 @@ const Search = () => {
         py-2
         rounded-full
         shadow-sm
-        hover:shadow-sm
+        hover:shadow-md
         transition
         cursor-pointer
     "
@@ -70,11 +70,11 @@ const Search = () => {
             <div className="text-sm font-semibold px-6">
                 {locationLabel}
             </div>
-            <div className="hidden sm:block text-sm font-semibold px-6 border-x flex-1 text-center">
+            <div className="hidden sm:block text-sm font-semibold px-6 border-x-1 flex-1 text-center">
                 {durationLabel}
             </div>
-            <div>
-                <div className="hidden sm:bloc">
+            <div className="text-sm pl-6 pr-2 text-gray-600 flex flex-row items-center gap-3">
+                <div className="hidden sm:block">
                     {guestLabel}
                 </div>
                 <div className="p-2 bg-rose-500 rounded-full text-white">

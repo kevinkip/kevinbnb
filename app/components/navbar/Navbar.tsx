@@ -18,7 +18,7 @@ const Navbar = () => {
                 </div>
             </Container>
         </div>
-        <Categories />
+        {/* <Categories /> */}
     </div>
   );
 }
