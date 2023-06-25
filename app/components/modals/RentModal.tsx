@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { toast } from "react-hot-toast";
 import { Field, FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import dynamic from 'next/navigation'
+import dynamic from 'next/dynamic'
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from 'react'
 
@@ -64,9 +64,9 @@ const RentModal = () => {
     const bathroomCount = watch('bathroomCount')
     const imageSrc = watch('imageSrc')
 
-    const Map = useMemo(() => dynamic(() => import('../Map'), {
-        ssr: false
-    }), [location])
+    const Map = useMemo(() => dynamic(() => import('../Map'), { 
+        ssr: false 
+      }), []); //removed location dependency. Add if things break
 
     const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {
@@ -163,7 +163,7 @@ const RentModal = () => {
     bodyContent = (
         <div className="flex flex-col gap-8">
             <Heading title="Add a photo of your place" subtitle="Show guests what your place looks like!" />
-            <ImageUpload {(value) => setCustomValue('imageSrc', value)}  value={imageSrc} />
+            <ImageUpload onChange={(value) => setCustomValue('imageSrc', value)}  value={imageSrc} />
         </div>
     )
    }
