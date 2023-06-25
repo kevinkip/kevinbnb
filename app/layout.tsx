@@ -6,9 +6,12 @@ import RegisterModal from './components/modals/RegisterModal'
 import SearchModal from './components/modals/SearchModal'
 import RentModal from './components/modals/RentModal'
 
+import ToasterProvider from './providers/ToasterProvider'
+import getCurrentUser from './actions/getCurrentUser'
+
 import ClientOnly from './components/ClientOnly'
 
-const inter = Nunito({ subsets: ['latin'] })
+const font = Nunito({ subsets: ['latin'] })
 
 //can control title and description
 export const metadata = {
@@ -16,19 +19,27 @@ export const metadata = {
   description: 'Airbnb clone',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const currentUser = await getCurrentUser();
+
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
           <ClientOnly>
-              <LoginModal />
-              <Navbar />
+            <ToasterProvider />
+            <LoginModal />
+            <RegisterModal />
+            <SearchModal />
+            <RentModal />
+            <Navbar currentUser={currentUser} />
           </ClientOnly>
-          {children}
+          <div className="pb-20 pt-28">
+            {children}
+          </div>
         </body>
     </html>
   )
