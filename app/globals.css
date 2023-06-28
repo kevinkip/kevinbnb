@@ -8,6 +8,10 @@ body,
     height: 100%
 }
 
+#input{
+    line-height: 28px;
+}
+
 .leaflet-bottom,
 .leaflet-control,
 .leaflet-pane,
