@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 import { toast } from "react-hot-toast";
-import { Field, FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import dynamic from 'next/dynamic'
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from 'react'
@@ -66,7 +66,7 @@ const RentModal = () => {
 
     const Map = useMemo(() => dynamic(() => import('../Map'), { 
         ssr: false 
-      }), []); //removed location dependency. Add if things break
+      }), [location]); //removed location dependency. Add if things break
 
     const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {

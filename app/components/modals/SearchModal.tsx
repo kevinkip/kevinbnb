@@ -40,7 +40,7 @@ const SearchModal = () => {
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
         ssr: false
-    }), []) //removed location dependency. Add if necessary
+    }), [location]) //removed location dependency. Add if necessary
 
     const onBack = useCallback(() => {
         setStep((value) => value - 1)
@@ -137,7 +137,7 @@ const SearchModal = () => {
         bodyContent = (
             <div className="flex flex-col gap-8">
                 <Heading title='More information' subtitle='Find your perfect place!' />
-                <Counter onChange={(value) => setGuestCount(value)} value={roomCount} title="Guests" subtitle="How many guests are coming?" />
+                <Counter onChange={(value) => setGuestCount(value)} value={guestCount} title="Guests" subtitle="How many guests are coming?" />
                 <hr />
                 <Counter onChange={(value) => setRoomCount(value)} value={roomCount} title="Rooms" subtitle="How many rooms do you need?" />
                 <hr />
