@@ -66,7 +66,7 @@ const RentModal = () => {
 
     const Map = useMemo(() => dynamic(() => import('../Map'), { 
         ssr: false 
-      }), [location]); //removed location dependency. Add if things break
+      }), []); //removed location dependency. Add if things break
 
     const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {

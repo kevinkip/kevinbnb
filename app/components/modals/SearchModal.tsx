@@ -40,7 +40,7 @@ const SearchModal = () => {
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
         ssr: false
-    }), [location]) //removed location dependency. Add if necessary
+    }), []) //removed location dependency. Add if necessary
 
     const onBack = useCallback(() => {
         setStep((value) => value - 1)
