@@ -72,7 +72,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
 
                             <MenuItem label="Airbnb your home" onClick={rentModal.onOpen}/>
                             <hr />
-                            <MenuItem label="Logout" onClick={() => signOut}/>
+                            <MenuItem label="Logout" onClick={() => signOut()}/>
                         </>
                     ) : (
                         <>
