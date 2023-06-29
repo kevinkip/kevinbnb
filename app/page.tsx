@@ -6,6 +6,8 @@ import getListings, { IListingParams } from "./actions/getListings";
 import getCurrentUser from "./actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
 
+export const dynamic = 'force-dynamic'
+
 interface HomeProps {
   searchParams: IListingParams
 }
