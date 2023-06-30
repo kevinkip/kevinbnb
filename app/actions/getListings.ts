@@ -77,8 +77,11 @@ export default async function getListings(
                 }
             }
         }
-
+        const listingsCount = await prisma.listing.count();
+        const skip = Math.floor(Math.random() * listingsCount);
         const listings = await prisma.listing.findMany({
+            take: 5,
+            skip: skip,
             where: query,
             orderBy: {
                 createdAt: 'desc'
