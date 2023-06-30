@@ -9,8 +9,8 @@ const Logo = () => {
   return (
     <Image 
     onClick={() => router.push('/')}
-    className="hidden md:block cursor-pointer py-3 px-4 rounded-full hover:bg-neutral-100 transition"
-    src="/images/kbnb_wide.png"
+    className="hidden md:block cursor-pointer py-1 px-1 rounded-lg hover:bg-neutral-100 transition"
+    src="/images/kbnb_bold_white.png"
     height="100"
     width="100"
     alt="Logo"
