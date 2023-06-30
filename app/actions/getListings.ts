@@ -80,7 +80,7 @@ export default async function getListings(
         const listingsCount = await prisma.listing.count();
         const skip = Math.floor(Math.random() * listingsCount);
         const listings = await prisma.listing.findMany({
-            take: 1,
+            take: listingsCount,
             skip: skip,
             where: query,
             orderBy: {
