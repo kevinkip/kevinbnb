@@ -1,4 +1,4 @@
-<h1 align="center">Unlock extraordinary experiences with KevinBnB: Where every stay tells a unique story!</h1>
+<h1 align="center"> KevinBnB: Where every stay tells a unique story! </h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
