@@ -11,8 +11,6 @@
 
 ![](https://github.com/kevinkip/kevinbnb/blob/master/public/images/Kevinbnb.gif)
 
-## Description
-
 # What was my motivation?
 -I was intrigued with the layout and design of AirBnb's website, and I wanted to emulate it. With the help of CodewithAntonio's tutorial, I was able to make this website look pretty close to the original. 
 
