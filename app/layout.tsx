@@ -28,6 +28,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+      <meta name="google-site-verification" content="NLGF57S_BI82gpIzIaiOoydbjYJoPnL2788lzLctcyY" />
+      </head>
       <body className={font.className}>
           <ClientOnly>
             <ToasterProvider />
